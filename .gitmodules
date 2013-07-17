@@ -1,0 +1,3 @@
+[submodule "python-forcast.io"]
+	path = python-forcast.io
+	url = https://github.com/ZeevG/python-forcast.io.git
