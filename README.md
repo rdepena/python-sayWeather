@@ -6,6 +6,7 @@ python script that uses forecast.io and the festival voice engine http://www.fes
 requirements: 
 
 1) you need a forecast.io api key
+
 2) you need festival installed.
 
 TODO: 
