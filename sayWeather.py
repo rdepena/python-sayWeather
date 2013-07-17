@@ -5,7 +5,7 @@ from festival import festival
 voice = festival();
 
 def main():
-    forecast = Forecastio("70f2d5ee3ee858d5869d2038f6001dad")
+    forecast = Forecastio("API Key goes here.")
     result = forecast.load_forecast(40.697488,-73.979681,
                                    time=datetime.datetime.now(), units="us")
 
