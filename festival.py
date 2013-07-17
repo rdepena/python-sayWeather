@@ -1,4 +1,4 @@
-#Dead simple festival "api"
+#Dead simple festival "api" lol.
 import os
 
 class festival():
