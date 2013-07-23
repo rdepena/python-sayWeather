@@ -1,17 +1,24 @@
 from forecastio import Forecastio
-import datetime
+from datetime import datetime
 from festival import festival
+from language import language
 
 voice = festival();
+lang = language();
 
 def main():
-    forecast = Forecastio("API Key goes here.")
+    forecast = Forecastio("")
+    time=datetime.now()
     result = forecast.load_forecast(40.697488,-73.979681,
-                                   time=datetime.datetime.now(), units="us")
+                                   time, units="us")
 
     if result['success'] is True:
 
-        voice.say("good morning humans")
+        #say the greeting:
+        voice.say(lang.greet(time.hour))
+
+        #say the time.
+        voice.say(lang.time(time))
 
         # print "===========Hourly Data========="
         by_hour = forecast.get_hourly()
