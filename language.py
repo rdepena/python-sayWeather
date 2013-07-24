@@ -5,15 +5,15 @@ class language ():
 	#I expect to be passed a 24 hour format hour int from 0 to 24
 	def greet(self, hour) :
 		#start the sentace with
-		greeting = "good "
-
+		pre = "good"
+		suffix = ""
 		if (hour < 13) :
-			greeting = greeting + "morning"
+			suffix = "morning"
 		elif (hour < 19) :
-			greeting = greeting + "afternoon"
+			suffix = "afternoon"
 		else :
-			greeting = greeting + "night"
-		return greeting;
+			suffix = "night"
+		return "%s %s"%(pre, suffix);
 
 	# perhaps a dateTime is in order...
 	def time(self, datetime) :

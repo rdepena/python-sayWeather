@@ -7,10 +7,10 @@ voice = festival();
 lang = language();
 
 def main():
-    forecast = Forecastio("")
+    forecast = Forecastio("70f2d5ee3ee858d5869d2038f6001dad")
     time=datetime.now()
-    result = forecast.load_forecast(40.697488,-73.979681,
-                                   time, units="us")
+    units = "us"
+    result = forecast.load_forecast(40.697488,-73.979681,time, units)
 
     if result['success'] is True:
 
@@ -26,14 +26,6 @@ def main():
         voice.say("Hourly Summary.")
         voice.say(by_hour.summary)
 
-        # print "===========Daily Data========="
-        by_day = forecast.get_daily()
-        print "Daily Summary: %s" % (by_day.summary)
-        voice.say("Daily Summary")
-        voice.say(by_day.summary)
-
-        for daily_data_point in by_day.data:
-            print daily_data_point
     else:
         print "A problem occurred communicating with the Forecast.io API"
 

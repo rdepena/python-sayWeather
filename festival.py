@@ -5,4 +5,7 @@ class festival():
 
 	#you will need festival installed on the machine.
 	def say(self,text):
-		os.system("echo " + str(text) + " | festival --tts")
+		os.system(self.build_command(text))
+
+	def build_command(self, text):
+		return "echo %s | festival --tts" %(text)
