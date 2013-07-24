@@ -7,7 +7,7 @@ voice = festival();
 lang = language();
 
 def main():
-    forecast = Forecastio("70f2d5ee3ee858d5869d2038f6001dad")
+    forecast = Forecastio("")
     time=datetime.now()
     units = "us"
     result = forecast.load_forecast(40.697488,-73.979681,time, units)
