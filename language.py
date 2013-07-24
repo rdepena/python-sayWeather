@@ -12,10 +12,12 @@ class language ():
 		elif (hour < 19) :
 			suffix = "afternoon"
 		else :
-			suffix = "night"
+			suffix = "evening"
 		return "%s %s"%(pre, suffix);
 
 	# perhaps a dateTime is in order...
-	def time(self, datetime) :
-
+	def time(self, datetime):
 		return datetime.strftime("%A %B %d %I:%M%p")
+
+	def summary_description(self):
+		return "The weather expected today is"

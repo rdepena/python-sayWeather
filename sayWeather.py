@@ -23,7 +23,7 @@ def main():
         # print "===========Hourly Data========="
         by_hour = forecast.get_hourly()
         print "Hourly Summary: %s" % (by_hour.summary)
-        voice.say("Hourly Summary.")
+        voice.say(lang.summary_description())
         voice.say(by_hour.summary)
 
     else:

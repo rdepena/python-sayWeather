@@ -19,12 +19,16 @@ class language_test(unittest.TestCase):
 		#afternoon check
 		self.assertEqual(lang.greet(13),"good afternoon")
 		#night check
-		self.assertEqual(lang.greet(20),"good night")
+		self.assertEqual(lang.greet(20),"good evening")
 
 	#test the time format is the same
 	def test_time_format (self):
 		testday = date(1983, 7, 19)
 		self.assertEqual(lang.time(testday),"Tuesday July 19 12:00AM")
+
+	def test_summary_description (self):
+		self.assertEqual(lang.summary_description(), "The weather expected today is")
+
 
 #any festival specific tests
 class festival_api_test(unittest.TestCase):
